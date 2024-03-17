@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "vehicleslib",
+    "name": "VehiclesLib",
+    "authors": [
+        "Moby_"
+    ],
+    "description": "A library to make it easy to add vehicles powered by nothing, steam, gas or temporal gears",
+    "version": "1.0.0-pre.2",
+    "dependencies": {
+        "game": ""
+    }
+}

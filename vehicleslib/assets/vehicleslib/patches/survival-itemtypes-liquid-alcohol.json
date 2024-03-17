@@ -1,0 +1,12 @@
+[
+  {
+    "op": "add",
+    "path": "/attributes/ExplosiveFuelProps",
+    "value": {
+      "powerRating": 0.7,
+      "energy": 7.0
+    },
+    "file": "game:itemtypes/liquid/alcohol.json",
+    "side": "Server"
+  }
+]

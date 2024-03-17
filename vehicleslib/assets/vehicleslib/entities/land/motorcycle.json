@@ -1,0 +1,110 @@
+﻿{
+  "code": "vehicle-motorcycle",
+  "class": "EntityVehicle",
+  "hitboxSize": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "Attributes": {
+    "VehicleProps": {
+      "canBePickedUp": true,
+      "density": 1200.0,
+      "SwimmingYOffset": 0.45,
+      "topSpeed": 10.0,
+      "acceleration": 1.0,
+      "swivelAngle": 0.0,
+      "groundMultiplier": 1.0,
+      "waterMultiplier": 0.15,
+      "turnSpeed": 260.0,
+      "movingTurnOnly": true,
+      "canStepUp": true,
+      "canReverse": true,
+      "canBrake": true,
+      "seats": [
+        {
+          "isControllable": true,
+          "angleMode": 1,
+          "lockBodyYaw": true,
+          "offset": {
+            "x": -0.2,
+            "y": 0.6,
+            "z": 0
+          },
+          "suggestedAnimation": "sneakidle",
+          "parentPart": "",
+          "aimPart": "",
+          "maxAimAngle": 0.0
+        }
+      ],
+      "wheels": [
+        {
+          "partName": "wheelback",
+          "strength": 8.0,
+          "enabled": true
+        },
+        {
+          "partName": "wheelfront",
+          "strength": 8.0,
+          "enabled": true
+        }
+      ],
+      "steer": [
+        {
+          "partName": "axlecontrol",
+          "strength": 2.5,
+          "enabled": true
+        }
+      ],
+      "propellers": [
+
+      ],
+      "engineProps": {
+        "fuelType": "gas",
+        "idleConsumption": 0.05,
+        "consumptionRatio": 1.0,
+        "tankCapacity": 3.0,
+        "alwaysIdle": false
+      },
+      "pushStrength": 1.0,
+      "idleSound": "",
+      "engineSound": "",
+      "useGravity": true,
+      "canFly": false,
+      "climbSpeed": 0.0,
+      "fallSpeed": 0.0,
+      "poweredFlightOnly": false
+    }
+  },
+  "client": {
+    "size": 0.9,
+    "renderer": "Shape",
+    "shape": {
+      "base": "motorcycle"
+    },
+    "PitchStep":  false,
+    "behaviors": [
+      {
+        "code": "passivephysics",
+        "groundDragFactor": 1,
+        "airDragFallingFactor": 0.5,
+        "gravityFactor": 1.0
+      },
+      { "code": "interpolateposition" },
+      { "code": "floatupwhenstuck" }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      {
+        "code": "passivephysics",
+        "groundDragFactor": 1,
+        "airDragFallingFactor": 0.5,
+        "gravityFactor": 1.0
+      },
+      { "code": "floatupwhenstuck" }
+    ]
+  },
+  "sounds": {
+  }
+}

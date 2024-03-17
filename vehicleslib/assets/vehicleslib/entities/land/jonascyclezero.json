@@ -1,0 +1,110 @@
+﻿{
+  "code": "vehicle-jonascyclezero",
+  "class": "EntityVehicle",
+  "hitboxSize": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "Attributes": {
+    "VehicleProps": {
+      "canBePickedUp": true,
+      "density": 1200.0,
+      "SwimmingYOffset": 0.45,
+      "topSpeed": 7.0,
+      "acceleration": 1.0,
+      "swivelAngle": 0.0,
+      "groundMultiplier": 1.0,
+      "waterMultiplier": 0.15,
+      "turnSpeed": 240.0,
+      "movingTurnOnly": true,
+      "canStepUp": true,
+      "canReverse": true,
+      "canBrake": true,
+      "seats": [
+        {
+          "isControllable": true,
+          "angleMode": 1,
+          "lockBodyYaw": true,
+          "offset": {
+            "x": 0,
+            "y": 0.4,
+            "z": 0
+          },
+          "suggestedAnimation": "sneakidle",
+          "parentPart": "",
+          "aimPart": "",
+          "maxAimAngle": 0.0
+        }
+      ],
+      "wheels": [
+        {
+          "partName": "wheel_back",
+          "strength": -8.0,
+          "enabled": true
+        },
+        {
+          "partName": "wheel_front",
+          "strength": -8.0,
+          "enabled": true
+        }
+      ],
+      "steer": [
+        {
+          "partName": "steer_axle",
+          "strength": 3,
+          "enabled": true
+        }
+      ],
+      "propellers": [
+
+      ],
+      "engineProps": {
+        "fuelType": "temporal",
+        "idleConsumption": 0.1,
+        "consumptionRatio": 1.0,
+        "tankCapacity": 3.0,
+        "alwaysIdle": false
+      },
+      "pushStrength": 1.0,
+      "idleSound": "",
+      "engineSound": "",
+      "useGravity": true,
+      "canFly": false,
+      "climbSpeed": 0.0,
+      "fallSpeed": 0.0,
+      "poweredFlightOnly": false
+    }
+  },
+  "client": {
+    "size": 1,
+    "renderer": "Shape",
+    "shape": {
+      "base": "jonascyclezero"
+    },
+    "PitchStep":  false,
+    "behaviors": [
+      {
+        "code": "passivephysics",
+        "groundDragFactor": 1,
+        "airDragFallingFactor": 0.5,
+        "gravityFactor": 1.0
+      },
+      { "code": "interpolateposition" },
+      { "code": "floatupwhenstuck" }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      {
+        "code": "passivephysics",
+        "groundDragFactor": 1,
+        "airDragFallingFactor": 0.5,
+        "gravityFactor": 1.0
+      },
+      { "code": "floatupwhenstuck" }
+    ]
+  },
+  "sounds": {
+  }
+}

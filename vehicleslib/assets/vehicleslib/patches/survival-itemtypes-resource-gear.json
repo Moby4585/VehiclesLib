@@ -1,0 +1,11 @@
+[
+  {
+    "op": "add",
+    "path": "/attributesByType/*-temporal/TemporalFuelProps",
+    "value": {
+      "burnTimeInSeconds": 3600
+    },
+    "file": "game:itemtypes/resource/gear.json",
+    "side": "Server"
+  }
+]
